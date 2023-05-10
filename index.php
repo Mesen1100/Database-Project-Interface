@@ -18,6 +18,9 @@
 
 <body>
     <div class="row text-center">
+        <div class="col-md-12">
+            <h1>DATABASE INFORMATION</h1>
+        </div>
         <div class="col-md-4">
             <a href="pages/account/account.php" target="_blank">
                 <img src="assets/img/account.png" alt="Account">
