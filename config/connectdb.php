@@ -1,6 +1,6 @@
 <?php
 try{
-	$db=new PDO("mysql:host=localhost;dbname=otel_db","root","");
+	$db=new PDO("mysql:host=localhost;dbname=bank_db","root","");
 	//echo "Bağlantı Başarılı";
 }
 catch(Exception $e){
