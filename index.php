@@ -18,41 +18,58 @@
 <body>
     <div class="row text-center">
         <div class="col-md-4">
-            <a href="account/account.php" target="_blank">
-            <img src="assets/img/account.png" alt="Account">
-            <h1>ACCOUNT</h1></a>
+            <a href="pages/account/account.php" target="_blank">
+                <img src="assets/img/account.png" alt="Account">
+                <h1>ACCOUNT</h1>
+            </a>
         </div>
         <div class="col-md-4">
-            <img src="assets/img/accounttype.png" alt="Account Type">
-            <h1>ACCOUNT TYPE</h1>
+            <a href="pages/account/accounttype.php" target="_blank">
+                <img src="assets/img/accounttype.png" alt="Account Type">
+                <h1>ACCOUNT TYPE</h1>
+            </a>
         </div>
         <div class="col-md-4">
-            <img src="assets/img/branch.png" alt="Branch">
-            <h1>BRANCH</h1>
+            <a href="pages/branch/branch.php" target="_blank">
+                <img src="assets/img/branch.png" alt="Branch">
+                <h1>BRANCH</h1>
+            </a>
         </div>
         <div class="col-md-4">
-            <img src="assets/img/customer.png" alt="Customer">
-            <h1>CUSTOMER</h1>
+            <a href="pages/account/customer.php" target="_blank">
+                <img src="assets/img/customer.png" alt="Customer">
+                <h1>CUSTOMER</h1>
+            </a>
         </div>
         <div class="col-md-4">
-             <img src="assets/img/loan.png" alt="Loan">
-            <h1>LOAN</h1>
+            <a href="pages/loan/loan.php" target="_blank">
+                <img src="assets/img/loan.png" alt="Loan">
+                <h1>LOAN</h1>
+            </a>
         </div>
         <div class="col-md-4">
-            <img src="assets/img/loantype.png" alt="Loan Type">
-            <h1>LOANTYPE</h1>
+            <a href="pages/loan/loantype.php" target="_blank">
+                <img src="assets/img/loantype.png" alt="Loan Type">
+                <h1>LOANTYPE</h1>
+            </a>
         </div>
         <div class="col-md-4">
-            <img src="assets/img/staff.png" alt="Staff">
-            <h1>STAFF</h1>
+            <a href="pages/branch/staff.php" target="_blank">
+                <img src="assets/img/staff.png" alt="Staff">
+                <h1>STAFF</h1>
+            </a>
         </div>
         <div class="col-md-4">
-            <img src="assets/img/transactions.png" alt="Transaction Type">
-            <h1>TRANSACTIONS</h1>
+            <a href="pages/transaction/transaction.php" target="_blank">
+                <img src="assets/img/transactions.png" alt="Transaction Type">
+                <h1>TRANSACTIONS</h1>
+            </a>
         </div>
         <div class="col-md-4">
-            <img src="assets/img/transactionstype.png" alt="Transactions Type">
-            <h1>TRASACTIONS TYPE</h1>
+            <a href="pages/transaction/transactiontype.php" target="_blank">
+                <img src="assets/img/transactionstype.png" alt="Transaction Type">
+                <h1>TRANSACTION TYPE</h1>
+            </a>
         </div>
 
 
