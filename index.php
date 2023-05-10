@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Bank Database Interface</title>
+    <link rel="shortcut icon" href="assets/img/database.png" type="image/x-icon">
     <script>
         setTimeout(() => {
             document.location.reload();
