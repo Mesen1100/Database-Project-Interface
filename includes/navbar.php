@@ -11,7 +11,7 @@
             <a class="nav-link mx-2 " href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2" href="#">About</a>
+            <a class="nav-link mx-2" href="about.php">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link mx-2" href="#">Contact</a>
