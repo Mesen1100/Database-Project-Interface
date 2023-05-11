@@ -21,7 +21,7 @@
       <div class=" collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto ">
           <li class="nav-item">
-            <a class="nav-link mx-2 active" aria-current="page" href="index.php">Home</a>
+            <a class="nav-link mx-2 active" href="https://localhost/DATABASE-PROJECT-INTERFACE">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link mx-2" href="pages/account/account.php">Account</a>

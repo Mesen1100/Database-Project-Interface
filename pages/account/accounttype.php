@@ -17,6 +17,8 @@
 </head>
 
 <body>
+<?php include "../includes/navbar.php";?>
+
     <div class="text-center">
         <h1>ACCOUNT TYPE</h1>
     </div>

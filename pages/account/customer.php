@@ -17,6 +17,8 @@
 </head>
 
 <body>
+<?php include "../includes/navbar.php";?>
+
     <div class="text-center">
         <h1>CUSTOMER</h1>
     </div>

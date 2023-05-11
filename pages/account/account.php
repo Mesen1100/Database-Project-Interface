@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,9 +15,11 @@
             document.location.reload();
         }, 5000);
     </script>
+    
 </head>
 
 <body>
+<?php include "../includes/navbar.php";?>
     <div class="text-center">
         <h1>ACCOUNT</h1>
     </div>
