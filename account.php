@@ -10,7 +10,9 @@
     <title>Account</title>
     <link rel="shortcut icon" href="assets/img/account.png" type="image/x-icon">
     <script>
-
+        setTimeout(() => {
+            document.location.reload();
+        }, 5000);
     </script>
 
 </head>

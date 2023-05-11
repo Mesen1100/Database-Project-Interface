@@ -4,18 +4,19 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">DATABASE INFORMATION</a>
+      <a class="navbar-brand" href="#">DATABASE INFORMATION WEBSITE</a>
       <div class=" collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto ">
           <li class="nav-item">
             <a class="nav-link mx-2 " href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2" href="pages/account/account.php">Account</a>
+            <a class="nav-link mx-2" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2" href="#">Pricing</a>
+            <a class="nav-link mx-2" href="#">Contact</a>
           </li>
+          
         </ul>
       </div>
     </div>
