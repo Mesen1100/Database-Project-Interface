@@ -21,6 +21,34 @@
     <div class="text-center">
         <h1>LOAN TYPE</h1>
     </div>
+    <?php
+    $loantypesor = $db->prepare("select * from loantype");
+    $loantypesor->execute();
+    $loantypegetir = $loantypesor->fetchAll(PDO::FETCH_ASSOC); ?>
+
+    <div class="card-body text-center">
+        <table id="example2" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Loan Type ID</th>
+                    <th>Loan Type</th>
+                    
+                </tr>
+            </thead>
+            <?php foreach ($loantypegetir as $row) {
+
+            ?>
+                <tr>
+                    <td><?php echo $row['loanTypeID']; ?></td>
+                    <td><?php echo $row['loanType']; ?></td>
+                    
+                </tr>
+            <?php } ?>
+        </table>
+    </div>
+
+
+    </div>
 </body>
 
 </html>
