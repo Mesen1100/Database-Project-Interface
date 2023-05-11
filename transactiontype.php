@@ -7,8 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style1.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Loan</title>
-    <link rel="shortcut icon" href="../../assets/img/loan.png" type="image/x-icon">
+    <title>Transaction Type</title>
+    <link rel="shortcut icon" href="assets/img/transactionstype.png" type="image/x-icon">
     <script>
         setTimeout(() => {
             document.location.reload();
@@ -17,9 +17,9 @@
 </head>
 
 <body>
-<?php include "../includes/navbar.php";?>
+<?php include "includes/navbar.php";?>
     <div class="text-center">
-        <h1>LOAN</h1>
+        <h1>TRANSACTIONS TYPE</h1>
     </div>
 </body>
 
