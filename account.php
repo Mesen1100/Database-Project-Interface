@@ -44,7 +44,11 @@
                     <td><?php echo $row['accountNumber']; ?></td>
                     <td><?php echo $row['accountBalance']; ?></td>
                     <td><?php echo $row['accountOpeningDate']; ?></td>
-                    <td><?php echo $row['accountClosingDate']; ?></td>
+                    <td><?php if ($row['accountClosingDate'] === 'null') {
+                            echo "-";
+                        } else {
+                            echo $row['accountClosingDate'];
+                        } ?></td>
                     <td><?php echo $row['accountTypeID']; ?></td>
                     <td><?php echo $row['customerID']; ?></td>
                 </tr>
