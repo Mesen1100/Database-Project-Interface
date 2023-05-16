@@ -36,7 +36,6 @@
                     <th>Account Opening Date</th>
                     <th>Account Closing Date</th>
                     <th>Account Type ID</th>
-                    <th>Customer ID</th>
                 </tr>
             </thead>
             <?php foreach ($accountgetir as $row) {
@@ -52,13 +51,10 @@
                             echo $row['accountClosingDate'];
                         } ?></td>
                     <td><?php echo $row['accountTypeID']; ?></td>
-                    <td><?php echo $row['customerID']; ?></td>
                 </tr>
             <?php } ?>
         </table>
     </div>
-
-
     </div>
 </body>
 

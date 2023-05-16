@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include "config/connectdb.php"?>
+<?php include "config/connectdb.php";?>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3">
     <div class="container-fluid">

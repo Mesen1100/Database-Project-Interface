@@ -17,7 +17,7 @@
 </head>
 
 <body>
-<?php include "includes/navbar.php";?>
+    <?php include "includes/navbar.php"; ?>
     <div class="text-center">
         <h1>CUSTOMER</h1>
     </div>
@@ -38,15 +38,21 @@
                     <th>Customer Tel No</th>
                     <th>Customer Email</th>
                     <th>Customer Address</th>
+                    <th>Customer Income</th>
+                    <th>Customer Credit Limit</th>
                     <th>Branch ID</th>
-                    
+
                 </tr>
             </thead>
             <?php foreach ($customergetir as $row) {
-
             ?>
                 <tr>
-                    <td><?php echo $row['customerID']; ?></td>
+                    <td>
+                        <form action="customerinfo.php" method="get">
+                            <input type="hidden" name="customerID" value="<?php echo $row['customerID'] ?>">
+                            <button type="submit"><?php echo $row['customerID']; ?></button>
+                        </form>
+                    </td>
                     <td><?php echo $row['customerName']; ?></td>
                     <td><?php echo $row['customerLastName']; ?></td>
                     <td><?php echo $row['dateofBirth']; ?></td>
@@ -54,9 +60,9 @@
                     <td><?php echo $row['customerTelNo']; ?></td>
                     <td><?php echo $row['customerEmail']; ?></td>
                     <td><?php echo $row['customerAddress']; ?></td>
+                    <td><?php echo $row['customerIncome']; ?></td>
+                    <td><?php echo $row['customerCreditLimit']; ?></td>
                     <td><?php echo $row['branchID']; ?></td>
-
-                    
                 </tr>
             <?php } ?>
         </table>
