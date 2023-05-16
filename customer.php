@@ -24,8 +24,8 @@
     <?php
     $customersor = $db->prepare("SELECT c.*, COUNT(a.customerID) AS numberofAccounts FROM customer c LEFT JOIN accountofcustomers a ON c.customerID = a.customerID GROUP BY c.customerID;");
     $customersor->execute();
-    $customergetir = $customersor->fetchAll(PDO::FETCH_ASSOC); 
-    
+    $customergetir = $customersor->fetchAll(PDO::FETCH_ASSOC);
+
     ?>
 
     <div class="card-body text-center">
@@ -44,6 +44,7 @@
                     <th>Customer Credit Limit</th>
                     <th>Customer Number of Accounts</th>
                     <th>Branch ID</th>
+                    <th>Edit</th>
 
                 </tr>
             </thead>
@@ -65,8 +66,12 @@
                     <td><?php echo $row['customerAddress']; ?></td>
                     <td><?php echo $row['customerIncome']; ?></td>
                     <td><?php echo $row['customerCreditLimit']; ?></td>
-                    <td><?php echo $row['numberofAccounts'];?></td>
+                    <td><?php echo $row['numberofAccounts']; ?></td>
                     <td><?php echo $row['branchID']; ?></td>
+                    <td><form action="customeredit.php" method="get" target="_blank">
+                        <input type="hidden" name="customerID" value="<?php echo $row['customerID'] ?>">
+                        <button type="submit">    
+                    <img src="assets/img/edit32.png" alt="Edit Profile"></button></form>
                 </tr>
             <?php } ?>
         </table>
