@@ -44,8 +44,8 @@
                     <th>Customer Credit Limit</th>
                     <th>Customer Number of Accounts</th>
                     <th>Branch ID</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    <th>Edit Customer</th>
+                    <th>Delete Customer</th>
 
                 </tr>
             </thead>
