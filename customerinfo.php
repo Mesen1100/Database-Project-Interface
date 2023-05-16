@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include "includes/navbar.php"; ?>
-<?php
-$accountsor = $db->prepare("select * from account");
-$accountsor->execute();
-$accountgetir = $accountsor->fetchAll(PDO::FETCH_ASSOC);
-
-$transactionssor = $db->prepare("select * from transactions");
-$transactionssor->execute();
-$transactionsgetir = $transactionssor->fetchAll(PDO::FETCH_ASSOC);
-
+<?php include "includes/navbar.php"; 
+$id=$_GET['customerID'];
+$customerprepare=$db->query("SELECT * FROM customer WHERE customerID=$id");
+$customer=$customerprepare ->fetch(PDO::FETCH_ASSOC);
 ?>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style1.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Customer</title>
-    <link rel="shortcut icon" href="assets/img/account.png" type="image/x-icon">
+    <title>Customer <?php echo $customer['customerName'] ?></title>
+    <link rel="shortcut icon" href="assets/img/customer.png" type="image/x-icon">
     <script>
         setTimeout(() => {
             document.location.reload();
@@ -92,11 +85,11 @@ $transactionsgetir = $transactionssor->fetchAll(PDO::FETCH_ASSOC);
                             </thead>
                             <?php 
                             $value = $_GET['customerID'];
-                            $sqlaccountids1 = "SELECT * FROM accountofcustomers WHERE customerID = $value";
+                            $sqlaccountids1 = "SELECT DISTINCT * FROM accountofcustomers WHERE customerID = $value";
                             $accountids1 = $db->query($sqlaccountids1);
                             $accountnumbers1 = $accountids1->fetchAll(PDO::FETCH_ASSOC);
-                            for ($i=0; $i <=1 ; $i++) {   
-                                $accountnumber1 = $accountnumbers1[$i]['accountNumber'];
+                            foreach ($accountnumbers1 as $accountnumbers1 ) { 
+                                $accountnumber1 = $accountnumbers1['accountNumber'];
                                 $sqlgetaccount1="SELECT * FROM transactions WHERE senderAccountNumber=$accountnumber1 or receiveAccountNumber=$accountnumber1";
                                 $gettransactions=$db -> query($sqlgetaccount1);
                                 $row1= $gettransactions->fetchAll(PDO::FETCH_ASSOC);

@@ -48,7 +48,7 @@
             ?>
                 <tr>
                     <td>
-                        <form action="customerinfo.php" method="get">
+                        <form action="customerinfo.php" method="get" target="_blank">
                             <input type="hidden" name="customerID" value="<?php echo $row['customerID'] ?>">
                             <button type="submit"><?php echo $row['customerID']; ?></button>
                         </form>
