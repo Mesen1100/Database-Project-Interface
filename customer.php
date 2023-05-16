@@ -22,9 +22,11 @@
         <h1>CUSTOMER</h1>
     </div>
     <?php
-    $customersor = $db->prepare("select * from customer");
+    $customersor = $db->prepare("SELECT c.*, COUNT(a.customerID) AS numberofAccounts FROM customer c LEFT JOIN accountofcustomers a ON c.customerID = a.customerID GROUP BY c.customerID;");
     $customersor->execute();
-    $customergetir = $customersor->fetchAll(PDO::FETCH_ASSOC); ?>
+    $customergetir = $customersor->fetchAll(PDO::FETCH_ASSOC); 
+    
+    ?>
 
     <div class="card-body text-center">
         <table id="example2" class="table table-bordered table-hover">
@@ -40,6 +42,7 @@
                     <th>Customer Address</th>
                     <th>Customer Income</th>
                     <th>Customer Credit Limit</th>
+                    <th>Customer Number of Accounts</th>
                     <th>Branch ID</th>
 
                 </tr>
@@ -62,6 +65,7 @@
                     <td><?php echo $row['customerAddress']; ?></td>
                     <td><?php echo $row['customerIncome']; ?></td>
                     <td><?php echo $row['customerCreditLimit']; ?></td>
+                    <td><?php echo $row['numberofAccounts'];?></td>
                     <td><?php echo $row['branchID']; ?></td>
                 </tr>
             <?php } ?>
