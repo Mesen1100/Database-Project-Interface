@@ -45,6 +45,7 @@
                     <th>Customer Number of Accounts</th>
                     <th>Branch ID</th>
                     <th>Edit</th>
+                    <th>Delete</th>
 
                 </tr>
             </thead>
@@ -71,7 +72,8 @@
                     <td><form action="customeredit.php" method="get" target="_blank">
                         <input type="hidden" name="customerID" value="<?php echo $row['customerID'] ?>">
                         <button type="submit">    
-                    <img src="assets/img/edit32.png" alt="Edit Profile"></button></form>
+                    <img src="assets/img/edit32.png" alt="Edit Profile"></button></form></td>
+                    <td><button><img src="assets/img/delete32.png" alt="Delete Profile"></button></td>
                 </tr>
             <?php } ?>
         </table>
