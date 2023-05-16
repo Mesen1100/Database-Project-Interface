@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include "config/connectdb.php";?>
+
+
+<?php include "config/connectdb.php"; ?>
+
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">DATABASE INFORMATION WEBSITE</a>
       <div class=" collapse navbar-collapse" id="navbarNavDropdown">
@@ -16,12 +19,12 @@
           <li class="nav-item">
             <a class="nav-link mx-2" href="#">Contact</a>
           </li>
-          
+
         </ul>
       </div>
     </div>
-    </nav>
-    
+  </nav>
+
 </body>
 
 </html>
