@@ -1,3 +1,7 @@
-div {
-    top: 100px;
-}
+    div {
+        top: 100px;
+    }
+    
+    .hidden {
+        display: none;
+    }
