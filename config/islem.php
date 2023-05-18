@@ -1,6 +1,8 @@
 <?php
 include "connectdb.php";
-
+if ($_GET['customerDelete'] == 1) {
+    //Delete code for customer 
+}
 if (isset($_POST['customeredit'])) {
     echo $_POST['customerID'];
     $query = $db->prepare("UPDATE customer SET
@@ -34,7 +36,6 @@ if (isset($_POST['customeredit'])) {
 
 
 if (isset($_POST['addtransaction'])) {
-
     if ($_POST['senderAccountNumber'] != $_POST['receiveAccountNumber']) {
         $sql = "SELECT MAX(transactionID) as max_id FROM transactions";
         $result = $db->prepare($sql);
@@ -72,6 +73,4 @@ if (isset($_POST['addtransaction'])) {
     } else {
         header('Location:../transaction.php?islem=no');
     }
-} else {
-    header('Location:../transaction.php?islem=no');
 }
