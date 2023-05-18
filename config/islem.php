@@ -1,7 +1,15 @@
 <?php
 include "connectdb.php";
 if ($_GET['customerDelete'] == 1) {
-    //Delete code for customer 
+    $sql="DELETE FROM customer WHERE customerID =:customerID";
+    $query=$db->prepare($sql);
+    $delete=$query->execute(array("customerID"=>$_GET['customerID']));
+    if(!$delete){
+        header("Location:../customer.php?islem=ok");
+    }
+    else{
+        header("Location:../customer.php?islem=no");
+    }
 }
 if (isset($_POST['customeredit'])) {
     echo $_POST['customerID'];

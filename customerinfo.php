@@ -78,7 +78,7 @@ $customer=$customerprepare ->fetch(PDO::FETCH_ASSOC);
                                     <th>Date of Create</th>
                                     <th>Date of Done</th>
                                     <th>Transaction Type ID</th>
-                                    <th>Description</th>
+                                    <th>Description Value</th>
                                     <th>Transaction State</th>
 
                                 </tr>
@@ -104,7 +104,7 @@ $customer=$customerprepare ->fetch(PDO::FETCH_ASSOC);
                                     <td><?php echo $row1['dateOfCreate']; ?></td>
                                     <td><?php echo $row1['dateOfDone']; ?></td>
                                     <td><?php echo $row1['transactionTypeID']; ?></td>
-                                    <td><?php echo $row1['description']; ?></td>
+                                    <td><?php echo $row1['descriptionValue']; ?></td>
                                     <td><?php echo $row1['transactionState']; ?></td>
 
 
