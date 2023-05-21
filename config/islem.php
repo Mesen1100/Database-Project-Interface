@@ -1,13 +1,34 @@
 <?php
 include "connectdb.php";
 if ($_GET['customerDelete'] == 1) {
-    $sql="DELETE FROM customer WHERE customerID =:customerID";
-    $query=$db->prepare($sql);
-    $delete=$query->execute(array("customerID"=>$_GET['customerID']));
-    if(!$delete){
-        header("Location:../customer.php?islem=ok");
+    $value = $_GET['customerID'];
+    $sqlaccountids = "SELECT * FROM accountofcustomers WHERE customerID = $value";
+    $accountids = $db->query($sqlaccountids);
+    $accountnumbers = $accountids->fetchAll(PDO::FETCH_ASSOC);
+
+
+    foreach ($accountnumbers as $row) {
+        $value = $row['accountNumber'];
+        $sqldeleteloan = "DELETE FROM loan WHERE accountNumber =:accountNumber";
+        $loan = $db->prepare($sqldeleteloan);
+        $sqldeleteloan = $loan->execute(array("accountNumber" => $value));
+
+        $sqldeleteaccount = "DELETE FROM account WHERE accountNumber =:accountNumber";
+        $deleteaccount = $db->prepare($sqldeleteaccount);
+        $sqldeleteaccount = $deleteaccount->execute(array("accountNumber" => $value));
+
+        $sqldeletetrans = "DELETE FROM transactions WHERE senderAccountNumber =:accountNumber or receiveAccountNumber =:accountNumber";
+        $trans = $db->prepare($sqldeletetrans);
+        $sqldeletetrans = $trans->execute(array("accountNumber" => $value));
     }
-    else{
+
+
+    $sql = "DELETE FROM customer WHERE customerID =:customerID";
+    $query = $db->prepare($sql);
+    $delete = $query->execute(array("customerID" => $_GET['customerID']));
+    if ($delete) {
+        header("Location:../customer.php?islem=ok");
+    } else {
         header("Location:../customer.php?islem=no");
     }
 }
