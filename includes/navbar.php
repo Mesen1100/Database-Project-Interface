@@ -7,7 +7,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">DATABASE INFORMATION WEBSITE</a>
+      <a class="navbar-brand">DATABASE INFORMATION WEBSITE</a>
       <div class=" collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto ">
           <li class="nav-item">
